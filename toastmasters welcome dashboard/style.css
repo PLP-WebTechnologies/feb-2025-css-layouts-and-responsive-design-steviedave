@@ -1,0 +1,164 @@
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f7;
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+}
+
+.navbar .logo h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .nav-links li a:hover {
+  color: #ff6347;
+}
+
+/* Main Content Section */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.welcome-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.welcome-card h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.welcome-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Grid Layout for Club Info */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Devices (768px or smaller) */
+@media only screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navbar .nav-links {
+      flex-direction: column;
+      margin-top: 10px;
+  }
+
+  .main-content {
+      padding: 40px 15px;
+  }
+
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-item {
+      padding: 15px;
+  }
+}
+
+/* Mobile Devices (480px or smaller) */
+@media only screen and (max-width: 480px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .navbar .logo h1 {
+      font-size: 1.2rem;
+  }
+
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+      padding: 10px;
+  }
+
+  .welcome-card h2 {
+      font-size: 1.5rem;
+  }
+
+  .welcome-card p {
+      font-size: 0.9rem;
+  }
+}
